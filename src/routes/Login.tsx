@@ -15,43 +15,47 @@ const Login = () => {
   };
 
   return (
-    <main className="screen-center">
+    <main className="root-layout">
+      <img
+        className="absolute top-0 right-0 w-32 h-32"
+        src="/circle.svg"
+        alt="/circle.svg"
+      />
+
       <Link to={"/"}>
-        <img className="w-48" src="/logo.png" alt="" />
+        <img className="logo" src="/logo.png" alt="" />
       </Link>
 
       <form className="card" onSubmit={handleSubmit}>
-        <h1 className="py-3 px-4 text-xl bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300 rounded-t-md text-white">
-          Login to your account
-        </h1>
+        <div className="card-title">
+          <h1>Login to your account</h1>
+        </div>
 
-        <div className="p-4 flex flex-col gap-4">
-          <div className="flex flex-1 justify-between items-center gap-4">
-            <label htmlFor="">Email or Phone Number</label>
+        <div className="flex flex-col gap-6 p-9">
+          <div className="card-input">
+            <label htmlFor="userInput">Email or Phone Number</label>
             <input
-              className="border-2 border-amber-300 rounded px-2 py-1"
               name="userInput"
               onChange={handleChange}
               type="text"
               placeholder="Email or Phone Number"
+              autoComplete="userInput"
             />
           </div>
-          <div className="flex flex-1 justify-between items-center gap-4">
-            <label htmlFor="">Password</label>
+          <div className="card-input">
+            <label htmlFor="password">Password</label>
             <input
-              className="border-2 border-amber-300 rounded px-2 py-1"
               name="password"
               onChange={handleChange}
               type="password"
               placeholder="***********"
+              autoComplete="password"
             />
           </div>
 
-          <div className="flex flex-1 justify-between items-center gap-4">
-            <button className="py-1 text-white w-40 bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500 shadow-md rounded">
-              Login
-            </button>
-            <Link className="text-xs" to={"/forgotpassword"}>
+          <div className="flex items-center justify-between flex-1">
+            <button className="card-button">Login</button>
+            <Link className="text-sm" to={"/forgotpassword"}>
               Forgot Password?
             </Link>
           </div>

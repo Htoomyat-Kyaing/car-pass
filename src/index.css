@@ -1,18 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .screen-center {
-    @apply min-w-full min-h-screen flex flex-col gap-4 justify-center items-center;
+@layer base {
+  html {
+    font-family: "Lato", system-ui, sans-serif;
   }
 }
 
 @layer components {
-  .card {
-    @apply w-[420px] rounded shadow-md;
+  .logo {
+    @apply w-full max-w-[370px];
   }
-  .verify-input {
-    @apply w-10 h-10 border-2 rounded-md border-amber-300;
+
+  /* card components */
+  .card {
+    @apply w-fit min-w-[645px] rounded-lg shadow-lg;
+  }
+
+  .card-title {
+    @apply flex items-center py-5 rounded-t-lg bg-card-title min-h-16;
+    h1 {
+      @apply indent-7 text-2xl font-['Libre_Baskerville'] font-bold text-white;
+    }
+  }
+
+  .card-input {
+    @apply flex items-center justify-between flex-1 gap-8;
+    label {
+      @apply text-lg min-w-52;
+    }
+    input {
+      @apply flex-grow text-base border-2 rounded h-fit indent-5 min-h-12 border-amber-300;
+    }
+  }
+
+  .card-button {
+    @apply text-xl text-white rounded shadow-lg w-fit min-w-52 min-h-12 bg-button;
+  }
+
+  .card-otp {
+    @apply border-2 rounded-md w-14 h-14 border-amber-300;
+  }
+}
+
+@layer utilities {
+  .root-layout {
+    @apply flex flex-col items-center min-w-full min-h-screen gap-8 py-20;
+  }
+
+  /* backgrounds */
+  .bg-sidebar {
+    background: linear-gradient(180deg, #ffcc00 0%, #ffaa01 59.17%);
+  }
+
+  .bg-card-title {
+    background: linear-gradient(
+      89.9deg,
+      #ffcc00 0.07%,
+      #ffa901 68.8%,
+      #ffaa01 68.81%,
+      #ffcc00 98.92%
+    );
+  }
+
+  .bg-button {
+    background: linear-gradient(180deg, #ffcc00 13.73%, #ffaa01 73.15%);
   }
 }

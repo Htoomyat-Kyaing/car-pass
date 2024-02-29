@@ -17,41 +17,47 @@ const ResetPassword = () => {
   };
 
   return (
-    <main className="screen-center">
+    <main className="root-layout">
+      <img
+        className="absolute top-0 right-0 w-32 h-32"
+        src="/circle.svg"
+        alt="circle.svg"
+      />
+
       <Link to={"/"}>
-        <img className="w-48" src="/logo.png" alt="" />
+        <img className="logo" src="/logo.png" alt="" />
       </Link>
 
       <form className="card" onSubmit={handleSubmit}>
-        <h1 className="py-3 px-4 text-xl bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300 rounded-t-md text-white">
-          Reset your password
-        </h1>
+        <div className="card-title">
+          <h1>Reset your password</h1>
+        </div>
 
-        <div className="p-4 flex flex-col gap-4">
-          <div className="flex flex-1 justify-between items-center gap-4">
-            <label htmlFor="">New Password</label>
+        <div className="flex flex-col gap-6 p-9">
+          <div className="card-input">
+            <label htmlFor="newPassword">New Password</label>
             <input
-              className="border-2 border-amber-300 rounded px-2 py-1"
               name="newPassword"
               onChange={handleChange}
               type="password"
               placeholder="Enter your new password"
+              autoComplete="newPassword"
             />
           </div>
-          <div className="flex flex-1 justify-between items-center gap-4">
-            <label htmlFor="">Confirm Password</label>
+          <div className="card-input">
+            <label htmlFor="confirmPassword">Confirm Password</label>
             <input
-              className="border-2 border-amber-300 rounded px-2 py-1"
               name="confirmPassword"
               onChange={handleChange}
               type="password"
               placeholder="***********"
+              autoComplete="confirmPassword"
             />
           </div>
 
-          <button className="py-1 text-white w-40 bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500 shadow-md rounded self-center">
-            Confirm
-          </button>
+          <div className="flex justify-center w-full">
+            <button className="card-button">Confirm</button>
+          </div>
         </div>
       </form>
     </main>
