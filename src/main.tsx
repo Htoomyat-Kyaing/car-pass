@@ -11,6 +11,7 @@ import Dashboard from "./routes/Dashboard.tsx";
 import CarPassTicket from "./routes/CarPassTicket.tsx";
 import Report from "./routes/Report.tsx";
 import SetupAndConfig from "./routes/SetupAndConfig.tsx";
+import Print from "./routes/Print.tsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/verifyotp",
     element: <VerifyOTP />,
+  },
+  {
+    path: "/print",
+    element: <Print />,
   },
 ]);
 

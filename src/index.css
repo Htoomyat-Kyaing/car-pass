@@ -16,15 +16,19 @@
     @apply w-full max-w-[370px];
   }
 
+  .sidebar-logo {
+    @apply w-full max-w-52;
+  }
+
   /* card components */
   .card {
-    @apply w-fit min-w-[645px] rounded-lg shadow-lg;
+    @apply w-full max-w-[645px] rounded-lg shadow-lg;
   }
 
   .card-title {
-    @apply flex items-center py-5 rounded-t-lg bg-card-title min-h-16;
+    @apply flex items-center py-5 rounded-t-lg px-7 bg-card-title min-h-16;
     h1 {
-      @apply indent-7 text-2xl font-['Libre_Baskerville'] font-bold text-white;
+      @apply text-2xl font-['Libre_Baskerville'] font-bold text-white;
     }
   }
 
@@ -33,13 +37,14 @@
     label {
       @apply text-lg min-w-52;
     }
-    input {
-      @apply flex-grow text-base border-2 rounded h-fit indent-5 min-h-12 border-amber-300;
+    input,
+    select {
+      @apply flex-grow h-full text-base border-2 rounded indent-5 min-h-12 border-amber-300;
     }
   }
 
   .card-button {
-    @apply text-xl text-white rounded shadow-lg w-fit min-w-52 min-h-12 bg-button;
+    @apply w-full text-xl text-white rounded shadow-lg max-w-52 min-h-12 bg-button;
   }
 
   .card-otp {
@@ -49,7 +54,7 @@
 
 @layer utilities {
   .root-layout {
-    @apply flex flex-col items-center min-w-full min-h-screen gap-8 py-20;
+    @apply flex flex-col items-center min-w-full min-h-screen gap-8 pt-20;
   }
 
   /* backgrounds */

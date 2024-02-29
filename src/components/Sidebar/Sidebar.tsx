@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const Sidebar = () => {
   return (
-    <nav className="flex flex-col items-center h-full min-h-screen gap-6 py-8 j bg-sidebar min-w-64">
-      <div className="h-24 bg-white w-52">Logo</div>
+    <nav className="flex flex-col items-center h-full min-h-screen gap-6 pt-12 j bg-sidebar min-w-64">
+      <Link to={"/"}>
+        <img className="sidebar-logo" src="/Sidebar/logo.png" alt="" />
+      </Link>
       <div className="flex flex-col items-center justify-center gap-2">
         <Button path="/" name="Dashboard" img="home.svg" />
         <Button
