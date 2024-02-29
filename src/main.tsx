@@ -3,15 +3,37 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./pages/Login.tsx";
-import ForgotPassword from "./pages/ForgotPassword.tsx";
-import ResetPassword from "./pages/ResetPassword.tsx";
-import VerifyOTP from "./pages/VerifyOTP.tsx";
+import Login from "./routes/Login.tsx";
+import ForgotPassword from "./routes/ForgotPassword.tsx";
+import ResetPassword from "./routes/ResetPassword.tsx";
+import VerifyOTP from "./routes/VerifyOTP.tsx";
+import Dashboard from "./routes/Dashboard.tsx";
+import CarPassTicket from "./routes/CarPassTicket.tsx";
+import Report from "./routes/Report.tsx";
+import SetupAndConfig from "./routes/SetupAndConfig.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Dashboard />,
+      },
+      {
+        path: "/carpassticket",
+        element: <CarPassTicket />,
+      },
+      {
+        path: "/report",
+        element: <Report />,
+      },
+      {
+        path: "/setupandconfig",
+        element: <SetupAndConfig />,
+      },
+    ],
   },
   {
     path: "/login",
