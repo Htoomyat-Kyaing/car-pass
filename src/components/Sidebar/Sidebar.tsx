@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Sidebar = () => {
   return (
-    <nav className="flex flex-col items-center h-full min-h-screen gap-6 pt-12 j bg-sidebar min-w-64">
+    <nav className="flex flex-col items-center min-h-full gap-6 pt-12 j bg-sidebar min-w-64">
       <Link to={"/"}>
         <img className="sidebar-logo" src="/Sidebar/logo.png" alt="" />
       </Link>

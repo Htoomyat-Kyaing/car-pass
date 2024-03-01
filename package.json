@@ -16,9 +16,12 @@
     "match-sorter": "^6.3.4",
     "postcss": "^8.4.35",
     "react": "^18.2.0",
+    "react-data-table-component": "^7.6.2",
     "react-dom": "^18.2.0",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.22.1",
     "sort-by": "^1.2.0",
+    "styled-components": "^6.1.8",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1"
   },
