@@ -15,7 +15,7 @@ const SetupAndConfig = () => {
     newPassword: "",
     confirmPassword: "",
   });
-  const [img, setImg] = useState(null);
+  const [img, setImg]: any[] = useState(null);
   const [passwordError, setPasswordError] = useState("");
   const infos = [
     {

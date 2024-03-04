@@ -8,10 +8,10 @@ const CarTypes = () => {
     { id: 4, name: "Big Car", price: 3000 },
     { id: 5, name: "Huge Car", price: 10000 },
   ]);
-  const [checkedRows, setCheckedRows] = useState([]);
+  const [checkedRows, setCheckedRows]: any[] = useState([]);
   const [newCarName, setNewCarName] = useState("");
   const [newCarPrice, setNewCarPrice] = useState("");
-  const [selectedCarType, setSelectedCarType] = useState(null);
+  const [selectedCarType, setSelectedCarType]: any[] = useState(null);
   const handleCheckboxChange = (event, id) => {
     const isChecked = event.target.checked;
 
