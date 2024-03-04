@@ -7,7 +7,7 @@ export default function App() {
     <main className="flex min-w-full min-h-screen">
       <Sidebar />
       <section className="flex-grow">
-        <div className="min-w-full">
+        <div className="">
           <Navbar />
         </div>
         <Outlet />

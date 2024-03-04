@@ -4,7 +4,7 @@ const VerifyOTP = () => {
   let navigate = useNavigate();
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
-    navigate("/resetpassword");
+    navigate("/reset-password");
   };
 
   return (

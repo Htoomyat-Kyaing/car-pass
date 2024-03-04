@@ -20,16 +20,27 @@ const Table = () => {
         fontSize: "20px",
       },
     },
+    headCells: {
+      style: {
+        width: "max-content",
+      },
+    },
     rows: {
       style: {
         fontSize: "20px",
+        height: "60px",
+        "&:not(:last-of-type)": {
+          borderBottomStyle: "solid",
+          borderBottomWidth: "0px",
+        },
       },
     },
   };
+
   const columns = [
     {
       name: "ID",
-      selector: (row: { id: number }) => row.id,
+      selector: (row: any) => row.id,
     },
     {
       name: "Date",
@@ -53,12 +64,7 @@ const Table = () => {
     },
     {
       name: "",
-      cell: () => (
-        <div className="flex gap-7">
-          <img src="/eye.svg" alt="eye.svg" />
-          <img src="/trash-2.svg" alt="trash-2.svg" />
-        </div>
-      ),
+      selector: (row: { setting: any }) => row.setting,
     },
   ];
   const data = [
@@ -69,30 +75,68 @@ const Table = () => {
       vnumber: "1F-1010",
       time: "9:45 AM",
       amount: 1000,
+      setting: (
+        <div className="flex gap-7">
+          <img src="/eye.svg" alt="eye.svg" />
+          <img src="/trash-2.svg" alt="trash-2.svg" />
+        </div>
+      ),
     },
     {
-      id: 1,
+      id: 2,
       date: "28/2/2024",
-      vtype: "Medium",
-      vnumber: "1F-1010",
-      time: "9:45 AM",
-      amount: 1000,
+      vtype: "Large",
+      vnumber: "1R-1010",
+      time: "10:00 AM",
+      amount: 2000,
+      setting: (
+        <div className="flex gap-7">
+          <img src="/eye.svg" alt="eye.svg" />
+          <img src="/trash-2.svg" alt="trash-2.svg" />
+        </div>
+      ),
     },
     {
-      id: 1,
+      id: 3,
       date: "28/2/2024",
-      vtype: "Medium",
-      vnumber: "1F-1010",
-      time: "9:45 AM",
-      amount: 1000,
+      vtype: "Small",
+      vnumber: "1F-1110",
+      time: "10:15 AM",
+      amount: 500,
+      setting: (
+        <div className="flex gap-7">
+          <img src="/eye.svg" alt="eye.svg" />
+          <img src="/trash-2.svg" alt="trash-2.svg" />
+        </div>
+      ),
     },
     {
-      id: 1,
+      id: 4,
       date: "28/2/2024",
       vtype: "Medium",
-      vnumber: "1F-1010",
-      time: "9:45 AM",
+      vnumber: "1F-1111",
+      time: "11:21 AM",
       amount: 1000,
+      setting: (
+        <div className="flex gap-7">
+          <img src="/eye.svg" alt="eye.svg" />
+          <img src="/trash-2.svg" alt="trash-2.svg" />
+        </div>
+      ),
+    },
+    {
+      id: null,
+      date: "",
+      vtype: "",
+      vnumber: "",
+      time: "Total",
+      amount: 4500,
+      setting: (
+        <div className="flex gap-7">
+          {/* <img src="/eye.svg" alt="eye.svg" />
+          <img src="/trash-2.svg" alt="trash-2.svg" /> */}
+        </div>
+      ),
     },
   ];
   return (

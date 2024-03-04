@@ -14,12 +14,14 @@ const Sidebar = () => {
           name="Car Pass Ticket"
           img="file-text.svg"
         />
-        <Button path="/report" name="Report" img="file-text.svg" />
+        <Button path="/view-report" name="Report" img="file-text.svg" />
         <Button
           path="/setupandconfig"
           name="Setup & Config"
           img="settings.svg"
         />
+        <Button path="/car-types" name="Car Types" img="" />
+        <Button path="/allusers" name="All Users" img="" />
       </div>
     </nav>
   );

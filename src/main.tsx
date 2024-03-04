@@ -12,6 +12,9 @@ import CarPassTicket from "./routes/CarPassTicket.tsx";
 import Report from "./routes/Report.tsx";
 import SetupAndConfig from "./routes/SetupAndConfig.tsx";
 import Print from "./routes/Print.tsx";
+import CarTypes from "./routes/CarTypes.tsx";
+import AllUsers from "./routes/AllUsers.tsx";
+import AddNewUser from "./routes/AddNewUser.tsx";
 
 const router = createBrowserRouter([
   {
@@ -27,12 +30,20 @@ const router = createBrowserRouter([
         element: <CarPassTicket />,
       },
       {
-        path: "/report",
+        path: "/view-report",
         element: <Report />,
       },
       {
         path: "/setupandconfig",
         element: <SetupAndConfig />,
+      },
+      {
+        path: "/car-types",
+        element: <CarTypes />,
+      },
+      {
+        path: "/allusers",
+        element: <AllUsers />,
       },
     ],
   },
@@ -41,11 +52,11 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/forgotpassword",
+    path: "/forgot-password",
     element: <ForgotPassword />,
   },
   {
-    path: "/resetpassword",
+    path: "/reset-password",
     element: <ResetPassword />,
   },
   {
@@ -55,6 +66,10 @@ const router = createBrowserRouter([
   {
     path: "/print",
     element: <Print />,
+  },
+  {
+    path: "/addnewuser",
+    element: <AddNewUser />,
   },
 ]);
 

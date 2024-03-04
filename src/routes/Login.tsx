@@ -55,7 +55,7 @@ const Login = () => {
 
           <div className="flex items-center justify-between flex-1">
             <button className="card-button">Login</button>
-            <Link className="text-sm" to={"/forgotpassword"}>
+            <Link className="text-sm" to={"/forgot-password"}>
               Forgot Password?
             </Link>
           </div>
